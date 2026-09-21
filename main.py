@@ -72,46 +72,154 @@ receitas=[
     {
         "nome":"Radio-Glow Shake",
         "cientista":"Marie Curie",
+        "tipo":"radio",
         "cor":VERDE,
         "ingredientes":[
             ("Isotopo de Radio-Glow",1),
             ("Baga Eletrica de Pantano",2),
             ("Essencia de Radiacao Fashion",1)
         ],
-        "processos":["blender","decorar"]
+        "processos":["blender","decorar"],
+        "quiz":[
+            {
+                "pergunta":"Marie Curie foi pioneira em estudos sobre o que?",
+                "opcoes":["Radioatividade","Culinaria","Astronomia"],
+                "correta":0,
+                "explicacao":"Marie Curie descobriu elementos radioativos como o Polonio e o Radio!"
+            },
+            {
+                "pergunta":"Quantos Premios Nobel Marie Curie ganhou, em areas diferentes?",
+                "opcoes":["Nenhum","Um","Dois"],
+                "correta":2,
+                "explicacao":"Ela foi a primeira pessoa da historia a ganhar Nobel em duas areas: Fisica e Quimica!"
+            },
+            {
+                "pergunta":"Marie Curie foi a primeira mulher a conquistar o que?",
+                "opcoes":["Um Premio Nobel","Pilotar um aviao","Ser prefeita"],
+                "correta":0,
+                "explicacao":"Ela foi a primeira mulher da historia a ganhar um Premio Nobel, em 1903."
+            },
+            {
+                "pergunta":"Qual elemento quimico tem o nome inspirado no pais natal de Marie Curie?",
+                "opcoes":["Polonio","Francio","Germanio"],
+                "correta":0,
+                "explicacao":"O Polonio foi batizado em homenagem a Polonia, terra natal de Marie Curie."
+            }
+        ]
     },
     {
         "nome":"Bio-Spooky",
         "cientista":"Rosalind Franklin",
+        "tipo":"dna",
         "cor":(190,100,255),
         "ingredientes":[
             ("Extrato de Planta Trepadeira Mutante",1),
             ("Soro de Raio-X Fotografico",1),
             ("Essencia de Estilo Genetico",2)
         ],
-        "processos":["blender","decorar"]
+        "processos":["blender","decorar"],
+        "quiz":[
+            {
+                "pergunta":"O trabalho de Rosalind Franklin ajudou a descobrir o formato de qual molecula?",
+                "opcoes":["DNA","Agua","Sal de cozinha"],
+                "correta":0,
+                "explicacao":"As imagens de Rosalind Franklin foram essenciais para revelar o formato do DNA."
+            },
+            {
+                "pergunta":"Rosalind Franklin usava qual tecnica para 'fotografar' moleculas minusculas?",
+                "opcoes":["Difracao de raios-X","Pintura a oleo","Microscopio de brinquedo"],
+                "correta":0,
+                "explicacao":"Ela usava difracao de raios-X para revelar estruturas invisiveis a olho nu."
+            },
+            {
+                "pergunta":"O DNA tem o formato de uma...?",
+                "opcoes":["Dupla helice (espiral dupla)","Estrela","Cubo"],
+                "correta":0,
+                "explicacao":"O DNA se parece com uma escada torcida, chamada dupla helice."
+            },
+            {
+                "pergunta":"O que o DNA guarda dentro das nossas celulas?",
+                "opcoes":["As instrucoes geneticas do corpo","Receitas de bolo","Fotos antigas"],
+                "correta":0,
+                "explicacao":"O DNA carrega as instrucoes que determinam como cada ser vivo se desenvolve."
+            }
+        ]
     },
     {
         "nome":"Cosmic Boo-cake",
         "cientista":"Katherine Johnson",
+        "tipo":"espaco",
         "cor":AZUL,
         "ingredientes":[
             ("Acucar Gravitacional Lunar",1),
             ("Massa de Baunilha das Trevas",1),
             ("Granulado Estrela Cadente",3)
         ],
-        "processos":["blender","forno","decorar"]
+        "processos":["blender","forno","decorar"],
+        "quiz":[
+            {
+                "pergunta":"Katherine Johnson calculava trajetorias para qual orgao espacial?",
+                "opcoes":["NASA","Escola de culinaria","Time de futebol"],
+                "correta":0,
+                "explicacao":"Katherine Johnson foi matematica da NASA e calculou rotas de missoes espaciais."
+            },
+            {
+                "pergunta":"O trabalho de Katherine Johnson ajudou astronautas a...?",
+                "opcoes":["Chegar com seguranca ao espaco e voltar","Aprender a cozinhar","Aprender a dancar"],
+                "correta":0,
+                "explicacao":"Seus calculos garantiram trajetorias seguras para missoes tripuladas da NASA."
+            },
+            {
+                "pergunta":"Katherine Johnson era especialista em qual area?",
+                "opcoes":["Matematica","Culinaria","Moda"],
+                "correta":0,
+                "explicacao":"Ela era uma matematica brilhante, essencial para o programa espacial dos EUA."
+            },
+            {
+                "pergunta":"O filme que conta a historia de Katherine Johnson se chama...?",
+                "opcoes":["Estrelas Alem do Tempo","Vingadores","Frozen"],
+                "correta":0,
+                "explicacao":"O filme 'Estrelas Alem do Tempo' (Hidden Figures) conta a historia dela e de outras cientistas."
+            }
+        ]
     },
     {
         "nome":"Steampunk Choco-Pie",
         "cientista":"Ada Lovelace",
+        "tipo":"codigo",
         "cor":AMARELO,
         "ingredientes":[
             ("Massa de Baunilha Sombria",1),
             ("Geleia de Frutas Vermelhas Ciberneticas",1),
             ("Engrenagem de Chocolate Binario",8)
         ],
-        "processos":["forno","decorar"]
+        "processos":["forno","decorar"],
+        "quiz":[
+            {
+                "pergunta":"Ada Lovelace e considerada a primeira...?",
+                "opcoes":["Programadora de computadores do mundo","Cientista de foguetes","Chef de cozinha"],
+                "correta":0,
+                "explicacao":"Ada Lovelace escreveu o que hoje reconhecemos como o primeiro programa de computador."
+            },
+            {
+                "pergunta":"Ada Lovelace escreveu instrucoes para qual maquina antiga?",
+                "opcoes":["A Maquina Analitica","Um liquidificador","Uma maquina de costura"],
+                "correta":0,
+                "explicacao":"Ela criou instrucoes para a Maquina Analitica, projetada por Charles Babbage."
+            },
+            {
+                "pergunta":"As instrucoes que Ada Lovelace escreveu, hoje chamamos de...?",
+                "opcoes":["Um programa (codigo)","Uma receita de bolo","Uma musica"],
+                "correta":0,
+                "explicacao":"O que ela escreveu e considerado o primeiro algoritmo feito para ser rodado numa maquina."
+            },
+            {
+                "pergunta":"Em homenagem a Ada Lovelace existe uma linguagem de programacao chamada...?",
+                "opcoes":["Ada","Python","Java"],
+                "correta":0,
+                "explicacao":"A linguagem de programacao 'Ada' foi batizada em sua homenagem."
+            }
+        ]
     }
 ]
 
@@ -129,6 +237,7 @@ rodando=True
 tela_atual="menu"
 receita_i=0
 pontos=0
+pontos_totais=0
 ingredientes=[]
 arrastando=None
 processo_ok=False
@@ -137,6 +246,16 @@ decoracoes=[]
 confeito=None
 particulas=[]
 animacao=0.0
+
+# Quiz
+quiz_index=0
+quiz_atual=None
+quiz_respondida=False
+quiz_selecionada=None
+destino_apos_quiz="ingredientes"
+
+# Nome do jogador (pedido so uma vez, na tela final)
+nome_jogador=""
 
 # ============================================================
 # UTILIDADES
@@ -160,39 +279,66 @@ def texto_ajustado(s,max_largura,tamanho=30,cor=BRANCO):
 def botao(s,x,y,w,h):
     r=pygame.Rect(x,y,w,h)
 
+    mx,my=pygame.mouse.get_pos()
+    passa_mouse=r.collidepoint(mx,my)
+
+    # Respiro leve o tempo todo, cresce um pouco mais no hover.
+    pulso=math.sin(animacao*3+x*0.01)*1.5
+    extra=10 if passa_mouse else 0
+
+    ww=int(w+extra)
+    hh=int(h+(extra*h//w if w else 0))
+    xx=int(x-(ww-w)//2)
+    yy=int(y-(hh-h)//2+pulso)
+
+    raio=min(24,hh//2)
+
+    cor_fundo=(140,75,180) if passa_mouse else ROXO
+    cor_borda=AMARELO if passa_mouse else ROSA
+
     pygame.draw.rect(
         tela,PRETO,
-        r.move(0,6),
-        border_radius=min(24,h//2)
+        (xx,yy+6,ww,hh),
+        border_radius=raio
+    )
+
+    if passa_mouse:
+        pygame.draw.rect(
+            tela,(255,235,150),
+            (xx-4,yy-4,ww+8,hh+8),
+            2,
+            border_radius=raio+2
+        )
+
+    pygame.draw.rect(
+        tela,cor_fundo,
+        (xx,yy,ww,hh),
+        border_radius=raio
     )
 
     pygame.draw.rect(
-        tela,ROXO,r,
-        border_radius=min(24,h//2)
-    )
-
-    pygame.draw.rect(
-        tela,ROSA,r,3,
-        border_radius=min(24,h//2)
+        tela,cor_borda,
+        (xx,yy,ww,hh),3,
+        border_radius=raio
     )
 
     brilho=pygame.Rect(
-        x+7,y+6,w-14,max(5,h//5)
+        xx+7,yy+6,ww-14,max(5,hh//5)
     )
 
     pygame.draw.rect(
         tela,(175,105,205),
         brilho,
-        border_radius=min(10,h//4)
+        border_radius=min(10,hh//4)
     )
 
-    im=texto_ajustado(s,w-20,30)
+    im=texto_ajustado(s,max(10,ww-20),30)
 
     tela.blit(
         im,
         (
-            x+(w-im.get_width())//2,
-            y+(h-im.get_height())//2
+            xx+(ww-im.get_width())//2,
+            yy+(hh-im.get_height())//2
         )
     )
 
@@ -200,6 +346,48 @@ def botao(s,x,y,w,h):
 
 def voltar():
     return botao("<",25,25,72,52)
+
+def barra_cabecalho(altura=140):
+    # Painel solido no topo: garante que titulo, pontos e botao
+    # de voltar nunca fiquem "brigando" visualmente com a
+    # decoracao do cenario atras.
+    pygame.draw.rect(
+        tela,(24,13,32),
+        (0,0,LARGURA,altura)
+    )
+
+    pygame.draw.rect(
+        tela,ROXO,
+        (0,altura-4,LARGURA,4)
+    )
+
+    pygame.draw.line(
+        tela,(70,40,88),
+        (0,altura-8),
+        (LARGURA,altura-8),
+        1
+    )
+
+def texto_multilinha(s,f,cor,x,y,max_largura,espaco=26):
+    palavras=s.split(" ")
+    linha=""
+    yy=y
+
+    for p in palavras:
+        teste=(linha+" "+p).strip()
+
+        if f.size(teste)[0]>max_largura and linha:
+            txt(linha,f,cor,x,yy)
+            yy+=espaco
+            linha=p
+        else:
+            linha=teste
+
+    if linha:
+        txt(linha,f,cor,x,yy)
+        yy+=espaco
+
+    return yy
 
 def efeito(x,y,c=ROSA,n=12):
     for _ in range(n):
@@ -265,6 +453,84 @@ def morcego(x,y,escala=1):
 
     pygame.draw.polygon(tela,PRETO,esquerda)
     pygame.draw.polygon(tela,PRETO,direita)
+
+def frasco_borbulhante(x,y,cor,escala=1):
+    # Erlenmeyer de laboratorio com liquido borbulhando.
+    pygame.draw.polygon(
+        tela,(210,225,235),
+        [
+            (x-4*escala,y-40*escala),
+            (x+4*escala,y-40*escala),
+            (x+26*escala,y+30*escala),
+            (x-26*escala,y+30*escala)
+        ]
+    )
+
+    pygame.draw.polygon(
+        tela,cor,
+        [
+            (x-16*escala,y-2*escala),
+            (x+16*escala,y-2*escala),
+            (x+22*escala,y+28*escala),
+            (x-22*escala,y+28*escala)
+        ]
+    )
+
+    pygame.draw.rect(
+        tela,CINZA,
+        (x-6*escala,y-46*escala,12*escala,8*escala),
+        border_radius=2
+    )
+
+    for k in range(3):
+        by=y+18*escala-((animacao*35+k*22)%(42*escala))
+        bx=x+math.sin(k+animacao*2)*8*escala
+
+        pygame.draw.circle(
+            tela,BRANCO,
+            (int(bx),int(by)),
+            max(1,int(2.5*escala))
+        )
+
+def helice_dna(x,y,altura,escala=1):
+    passos=8
+
+    for i in range(passos):
+        t=i/(passos-1)
+        yy=y+t*altura
+        onda=math.sin(animacao*1.5+t*math.tau)
+
+        x1=x-14*escala*onda
+        x2=x+14*escala*onda
+
+        pygame.draw.line(
+            tela,(90,160,235),
+            (x1,yy),(x2,yy),
+            max(1,int(2*escala))
+        )
+
+        pygame.draw.circle(
+            tela,ROSA2,(int(x1),int(yy)),max(1,int(3*escala))
+        )
+
+        pygame.draw.circle(
+            tela,AZUL,(int(x2),int(yy)),max(1,int(3*escala))
+        )
+
+def engrenagem_decorativa(x,y,raio,cor=AMARELO,vel=1):
+    ang=animacao*vel
+
+    for k in range(8):
+        a=ang+k*(math.tau/8)
+        px=x+math.cos(a)*(raio+5)
+        py=y+math.sin(a)*(raio+5)
+
+        pygame.draw.circle(
+            tela,cor,(int(px),int(py)),max(2,int(raio*0.22))
+        )
+
+    pygame.draw.circle(tela,cor,(int(x),int(y)),raio)
+    pygame.draw.circle(tela,MARROM,(int(x),int(y)),max(2,int(raio*0.4)))
 
 def monstrinho(x,y,escala=1):
     pygame.draw.circle(
@@ -560,6 +826,52 @@ def parede():
     morcego(105,55,.8)
     morcego(680,55,.7)
     monstrinho(760,170,.8)
+
+    # ------------------------------------------------------
+    # DECORACAO EXTRA "LABORATORIO"
+    # Fica sempre nas margens (cantos e laterais) para nunca
+    # brigar com titulos, cards ou botoes do conteudo central.
+    # ------------------------------------------------------
+
+    # Piso quadriculado no rodape.
+    for x in range(0,800,40):
+        for y in range(560,600,40):
+            cor_piso=(46,26,58) if ((x//40+y//40)%2==0) else (40,22,52)
+
+            pygame.draw.rect(
+                tela,cor_piso,
+                (x,y,40,40)
+            )
+
+    pygame.draw.line(
+        tela,ROXO2,
+        (0,560),(800,560),2
+    )
+
+    # Frascos borbulhantes nos cantos inferiores.
+    frasco_borbulhante(38,555,VERDE,.85)
+    frasco_borbulhante(762,555,ROSA,.85)
+
+    # Helice de DNA discreta na lateral direita.
+    helice_dna(778,160,270,.55)
+
+    # Engrenagens steampunk na lateral esquerda.
+    engrenagem_decorativa(24,220,16,AMARELO,.6)
+    engrenagem_decorativa(24,258,10,CINZA,-.9)
+
+    # Pequeno "poster" de tabela periodica no canto,
+    # abaixo da faixa de prateleira.
+    for i in range(4):
+        for j in range(3):
+            px=18+i*15
+            py=470+j*15
+
+            pygame.draw.rect(
+                tela,
+                [AZUL,VERDE,AMARELO,ROSA][(i+j)%4],
+                (px,py,12,12),
+                border_radius=2
+            )
 
 # ============================================================
 # MENU
@@ -893,9 +1205,6 @@ def desenhar_base_da_receita(
         )
 
     # --------------------------------------------------------
-    # STEAMPUNK CHOCO-PIE
-    # --------------------------------------------------------
-        # --------------------------------------------------------
     # STEAMPUNK CHOCO-PIE
     # TORTA DE CHOCOLATE COM MASSA QUADRICULADA
     # --------------------------------------------------------
@@ -1393,6 +1702,7 @@ def iniciar():
     global decoracoes
     global confeito
     global arrastando
+    global quiz_index
 
     pontos=0
     processo_ok=False
@@ -1400,6 +1710,7 @@ def iniciar():
     decoracoes=[]
     confeito=None
     arrastando=None
+    quiz_index=0
 
     criar_ingredientes()
 
@@ -1414,59 +1725,108 @@ def bancada():
         (0,450,800,7)
     )
 
-def tigela():
+def tigela(r):
+    cx,cy=600,345
+
+    total=len(ingredientes)
+    feitos_lista=[i for i in ingredientes if i["colocado"]]
+    frac=len(feitos_lista)/total if total else 0
+
+    # Sombra suave embaixo da tigela.
+    sombra=pygame.Surface((340,80),pygame.SRCALPHA)
+    pygame.draw.ellipse(sombra,(0,0,0,90),(0,0,340,80))
+    tela.blit(sombra,(cx-170,cy+58))
+
+    # Corpo de vidro da tigela.
     pygame.draw.ellipse(
-        tela,PRETO,
-        (455,365,310,55)
+        tela,(150,205,235),
+        (cx-155,cy-75,315,168)
     )
 
     pygame.draw.ellipse(
-        tela,(125,185,225),
-        (445,270,315,165)
+        tela,(215,240,250),
+        (cx-140,cy-87,285,110)
     )
 
     pygame.draw.ellipse(
-        tela,(210,240,250),
-        (460,258,285,105)
+        tela,(95,140,190),
+        (cx-125,cy-63,255,90)
     )
 
-    pygame.draw.ellipse(
-        tela,(75,110,170),
-        (475,282,255,86)
-    )
+    # Liquido: cresce e ganha a cor da receita conforme os
+    # ingredientes vao sendo colocados.
+    if frac>0:
 
-    pygame.draw.ellipse(
-        tela,(238,250,255),
-        (492,290,220,62)
+        base=(248,244,252)
+        alvo=r["cor"]
+
+        cor_liq=tuple(
+            int(base[k]+(alvo[k]-base[k])*frac)
+            for k in range(3)
+        )
+
+        altura=18+frac*46
+
+        pygame.draw.ellipse(
+            tela,cor_liq,
+            (
+                cx-120,
+                cy-58+(46-altura),
+                240,
+                int(altura)+42
+            )
+        )
+
+        pygame.draw.ellipse(
+            tela,
+            tuple(min(255,c+35) for c in cor_liq),
+            (cx-70,cy-52,140,24)
+        )
+
+        # Borbulhas subindo, so enquanto tem liquido.
+        for k in range(4):
+            bx=cx-90+k*55+math.sin(animacao*2+k)*8
+            by=cy-10-((animacao*45+k*23)%55)
+
+            pygame.draw.circle(
+                tela,BRANCO,
+                (int(bx),int(by)),
+                max(1,2 if k%2==0 else 3)
+            )
+
+    # Brilho de vidro (arco claro na borda).
+    pygame.draw.arc(
+        tela,BRANCO,
+        (cx-140,cy-87,285,110),
+        math.pi,math.tau,5
     )
 
     pygame.draw.arc(
-        tela,BRANCO,
-        (460,258,285,105),
-        math.pi,
-        math.tau,
-        5
+        tela,(255,255,255),
+        (cx-118,cy-75,90,40),
+        math.pi*0.85,math.pi*1.5,3
     )
 
-    feitos=[
-        i for i in ingredientes
-        if i["colocado"]
-    ]
+    # Todos os ingredientes ja colocados, flutuando no liquido.
+    for k,i in enumerate(feitos_lista):
+        boiar=math.sin(animacao*2+k)*3
 
-    for k,i in enumerate(feitos):
         icone(
             i["nome"],
-            515+(k%5)*43,
-            325+(k//5)*25,
+            cx-85+(k%5)*43,
+            cy-20+(k//5)*25+boiar,
             .42
         )
 
-    center(
-        "TIGELA",
-        fonte,
-        BRANCO,
-        395
-    )
+    # Quando esta completo, um brilho dourado convida a continuar.
+    if total and frac==1:
+        raio=95+math.sin(animacao*4)*6
+
+        pygame.draw.circle(
+            tela,AMARELO,
+            (int(cx),int(cy-10)),
+            int(raio),2
+        )
 
 def ingrediente(i):
     if i["colocado"]:
@@ -1479,44 +1839,70 @@ def ingrediente(i):
         i["h"]
     )
 
-    if i["arrastando"]:
-        pygame.draw.rect(
-            tela,PRETO,
-            q.move(4,4),
-            border_radius=14
-        )
+    mx,my=pygame.mouse.get_pos()
+    em_foco=i["arrastando"] or q.collidepoint(mx,my)
+
+    sombra_y=8 if i["arrastando"] else 4
 
     pygame.draw.rect(
-        tela,ROXO,
+        tela,PRETO,
+        q.move(0,sombra_y),
+        border_radius=16
+    )
+
+    cor_fundo=(135,70,175) if em_foco else ROXO
+    cor_borda=AMARELO if em_foco else ROSA
+
+    pygame.draw.rect(
+        tela,cor_fundo,
         q,
-        border_radius=14
+        border_radius=16
     )
 
     pygame.draw.rect(
-        tela,ROSA,
+        tela,cor_borda,
         q,
         2,
-        border_radius=14
+        border_radius=16
+    )
+
+    # Friso claro no topo do card, como os botoes.
+    pygame.draw.rect(
+        tela,(175,105,205),
+        (i["x"]+8,i["y"]+5,i["w"]-16,6),
+        border_radius=4
+    )
+
+    # Selo redondo atras do icone, pra destacar melhor.
+    bx,by=i["x"]+34,i["y"]+34
+
+    pygame.draw.circle(
+        tela,(48,24,62),
+        (bx,by),24
+    )
+
+    pygame.draw.circle(
+        tela,ROSA2 if em_foco else ROXO2,
+        (bx,by),24,2
     )
 
     icone(
         i["nome"],
-        i["x"]+30,
-        i["y"]+31,
-        .58
+        bx,by,
+        .5
     )
 
     f=pequena
 
-    if pequena.size(i["nome"])[0]>=135:
+    if pequena.size(i["nome"])[0]>=140:
         f=pygame.font.Font(None,17)
 
     txt(
         i["nome"],
         f,
         BRANCO,
-        i["x"]+57,
-        i["y"]+9
+        i["x"]+62,
+        i["y"]+12
     )
 
     if i["u"]>1:
@@ -1524,12 +1910,13 @@ def ingrediente(i):
             "unidade "+str(i["u"]),
             pygame.font.Font(None,16),
             ROSA2,
-            i["x"]+57,
-            i["y"]+38
+            i["x"]+62,
+            i["y"]+40
         )
 
 def ingredientes_tela():
     parede()
+    barra_cabecalho()
 
     r=receitas[receita_i]
 
@@ -1559,7 +1946,7 @@ def ingredientes_tela():
     )
 
     bancada()
-    tigela()
+    tigela(r)
 
     for i in ingredientes:
         ingrediente(i)
@@ -1603,6 +1990,7 @@ def ingredientes_tela():
 # ============================================================
 def liquidificador():
     parede()
+    barra_cabecalho()
 
     r=receitas[receita_i]
 
@@ -1639,7 +2027,21 @@ def liquidificador():
         105
     )
 
-    x,y=430,170
+    ativo=(not processo_ok) and tempo_processo>0
+
+    tremor=math.sin(animacao*40)*4 if ativo else 0
+
+    x,y=430+tremor,170
+
+    if ativo:
+        raio_halo=90+math.sin(animacao*6)*10
+
+        pygame.draw.circle(
+            tela,r["cor"],
+            (int(x+110),int(y+90)),
+            int(raio_halo),
+            3
+        )
 
     pygame.draw.ellipse(
         tela,PRETO,
@@ -1788,6 +2190,7 @@ def liquidificador():
 # ============================================================
 def forno():
     parede()
+    barra_cabecalho()
 
     r=receitas[receita_i]
 
@@ -1824,7 +2227,25 @@ def forno():
         100
     )
 
-    x,y=265,145
+    ativo=(not processo_ok) and tempo_processo>0
+
+    tremor=math.sin(animacao*25)*2 if ativo else 0
+
+    x,y=265+tremor,145
+
+    if ativo:
+        for i in range(3):
+            oy=y-10-i*16+math.sin(animacao*5+i)*5
+
+            pygame.draw.line(
+                tela,(255,195,150),
+                (x+95,oy),(x+120,oy-14),2
+            )
+
+            pygame.draw.line(
+                tela,(255,195,150),
+                (x+150,oy),(x+175,oy-14),2
+            )
 
     pygame.draw.ellipse(
         tela,PRETO,
@@ -1889,6 +2310,15 @@ def forno():
             tela,AMARELO,
             (x+135,y+160),
             30
+        )
+
+    elif ativo:
+        pisca=int(180+60*abs(math.sin(animacao*9)))
+
+        pygame.draw.rect(
+            tela,(pisca,80,45),
+            (x+36,y+96,198,138),
+            border_radius=9
         )
 
     pygame.draw.rect(
@@ -2093,6 +2523,7 @@ def decor(t,x,y,s=1):
 
 def decoracao():
     parede()
+    barra_cabecalho()
 
     r=receitas[receita_i]
     b=voltar()
@@ -2159,28 +2590,188 @@ def decoracao():
 
     return b,bs,botao("PRONTO!",300,510,200,50)
 
+# ============================================================
+# QUIZ DE CURIOSIDADES
+# ============================================================
+def quiz_tela():
+    parede()
+    barra_cabecalho()
+
+    r=receitas[receita_i]
+    q=quiz_atual
+
+    txt(r["cientista"],grande,ROSA,115,28)
+    txt("Card de curiosidade cientifica",fonte,ROSA2,115,72)
+    txt("Pontos: "+str(pontos),fonte,AMARELO,650,32)
+
+    center("HORA DO QUIZ!",titulo,ROSA,95)
+
+    desenhar_retrato(35,175,r["tipo"],150,170)
+
+    prox_y=texto_multilinha(
+        q["pergunta"],fonte,BRANCO,215,175,545,30
+    )
+
+    oy=max(prox_y+15,255)
+
+    opcoes_rects=[]
+
+    for idx,opc in enumerate(q["opcoes"]):
+
+        if quiz_respondida:
+
+            if idx==q["correta"]:
+                cor_fundo=VERDE
+            elif idx==quiz_selecionada:
+                cor_fundo=VERMELHO
+            else:
+                cor_fundo=ROXO2
+
+            rect=pygame.Rect(215,oy,545,52)
+
+            pygame.draw.rect(
+                tela,PRETO,rect.move(0,5),border_radius=14
+            )
+            pygame.draw.rect(
+                tela,cor_fundo,rect,border_radius=14
+            )
+            pygame.draw.rect(
+                tela,BRANCO,rect,2,border_radius=14
+            )
+
+            letra=chr(65+idx)+")  "+opc
+            im=texto_ajustado(letra,rect.w-30,26,BRANCO)
+
+            tela.blit(
+                im,
+                (rect.x+15,rect.y+(rect.h-im.get_height())//2)
+            )
+
+        else:
+            letra=chr(65+idx)+")  "+opc
+            rect=botao(letra,215,oy,545,52)
+
+        opcoes_rects.append(rect)
+        oy+=62
+
+    continuar=None
+
+    if quiz_respondida:
+
+        acertou=quiz_selecionada==q["correta"]
+
+        if acertou:
+            center("CORRETO! +15 pontos",fonte,VERDE,oy+6)
+        else:
+            center("Quase! Veja a explicacao:",fonte,AMARELO,oy+6)
+
+        texto_multilinha(
+            q.get("explicacao",""),pequena,ROSA2,215,oy+38,545
+        )
+
+        continuar=botao("CONTINUAR",300,540,200,48)
+
+    else:
+        center(
+            "Toque na resposta que voce acha certa",
+            pequena,BRANCO,oy+8
+        )
+
+    return opcoes_rects,continuar
+
+def preparar_quiz(destino):
+    global tela_atual,quiz_atual,quiz_respondida
+    global quiz_selecionada,destino_apos_quiz,quiz_index
+
+    lista=receitas[receita_i]["quiz"]
+
+    quiz_atual=lista[quiz_index%len(lista)]
+    quiz_index+=1
+
+    quiz_respondida=False
+    quiz_selecionada=None
+    destino_apos_quiz=destino
+    tela_atual="quiz"
+
+# ============================================================
+# PEDIR NOME DO JOGADOR
+# ============================================================
+def tela_nome():
+    parede()
+    barra_cabecalho(110)
+
+    center("QUASE LA!",titulo,ROSA,20)
+
+    center(
+        "Como podemos te chamar, confeiteira(o)?",
+        fonte,BRANCO,140
+    )
+
+    caixa=pygame.Rect(190,220,420,64)
+
+    pygame.draw.rect(
+        tela,PRETO,caixa.move(0,6),border_radius=16
+    )
+    pygame.draw.rect(
+        tela,ROXO2,caixa,border_radius=16
+    )
+    pygame.draw.rect(
+        tela,ROSA,caixa,3,border_radius=16
+    )
+
+    cursor="|" if int(animacao*2)%2==0 else ""
+
+    txt(
+        nome_jogador+cursor,
+        grande,BRANCO,
+        caixa.x+18,caixa.y+14
+    )
+
+    center(
+        "Digite seu nome e aperte ENTER, ou clique em CONFIRMAR",
+        pequena,ROSA2,305
+    )
+
+    return botao("CONFIRMAR",300,375,200,55)
+
 # RESULTADO
 # ============================================================
 def resultado():
     parede()
+    barra_cabecalho(90)
 
     r=receitas[receita_i]
 
-    center("RECEITA PRONTA!",titulo,ROSA,55)
-    center("PARABENS!",grande,AMARELO,125)
-    center(r["nome"],grande,BRANCO,175)
-    center("Pontuacao: "+str(pontos),fonte,ROSA2,220)
+    center("RECEITA PRONTA!",grande,ROSA,20)
+    center(
+        "Parabens, "+(nome_jogador or "Confeiteira(o)")+"!",
+        fonte,AMARELO,60
+    )
+
+    center(r["nome"],grande,BRANCO,105)
+
+    txt(
+        "Pontos nesta receita: "+str(pontos),
+        pequena,ROSA2,240,152
+    )
+
+    txt(
+        "Pontuacao total: "+str(pontos_totais),
+        pequena,AMARELO,240,175
+    )
 
     # Mantem o desenho original da receita sem alterar nada nele.
     desenhar_base_da_receita(r,400,350)
 
-    # As mesmas decoracoes escolhidas na tela anterior, agora reposicionadas
-    # proporcionalmente sobre a receita do resultado.
+    # CORRIGIDO: usa a mesma posicao absoluta em que a decoracao
+    # foi colocada, ja que a comida e desenhada com o mesmo
+    # cx=400, cy=350, escala=1 nas duas telas (decoracao e resultado).
+    # Antes disso havia um fator de reescala (0.55) que empurrava as
+    # decoracoes para perto do centro sem nenhuma relacao com o
+    # tamanho real da comida, fazendo elas sumirem ou ficarem
+    # deslocadas em relacao ao desenho.
     for d in decoracoes:
-        dx,dy=d[1],d[2]
-        rx=400+(dx-400)*0.55
-        ry=350+(dy-350)*0.55
-        decor(d[0],rx,ry,.65)
+        decor(d[0],d[1],d[2])
 
     center("Sua receita decorada!",fonte,ROSA2,445)
 
@@ -2228,7 +2819,7 @@ def desenhar_retrato(
     foco={
         "radio":.50,
         "dna":.62,
-        "espaco":.55,
+        "espaco":.34,
         "codigo":.48
     }.get(tipo,.50)
 
@@ -2481,6 +3072,33 @@ while rodando:
             rodando=False
 
         # ----------------------------------------------------
+        # DIGITAR NOME (tela "nome")
+        # ----------------------------------------------------
+        if (
+            e.type==pygame.KEYDOWN
+            and tela_atual=="nome"
+        ):
+            if e.key==pygame.K_BACKSPACE:
+
+                nome_jogador=nome_jogador[:-1]
+
+            elif e.key==pygame.K_RETURN:
+
+                if nome_jogador.strip()=="":
+                    nome_jogador="Confeiteira(o)"
+
+                pontos_totais+=pontos
+                tela_atual="resultado"
+
+            elif (
+                e.unicode
+                and e.unicode.isprintable()
+                and len(nome_jogador)<14
+            ):
+
+                nome_jogador+=e.unicode
+
+        # ----------------------------------------------------
         # CLIQUE
         # ----------------------------------------------------
         if (
@@ -2530,8 +3148,9 @@ while rodando:
                             iniciar()
 
                             # IMPORTANTE:
-                            # Sempre começa pelos ingredientes.
-                            tela_atual="ingredientes"
+                            # Antes dos ingredientes, mostra
+                            # um quiz sobre a cientista.
+                            preparar_quiz("ingredientes")
 
                             break
 
@@ -2556,9 +3175,9 @@ while rodando:
                     processo_ok=False
                     tempo_processo=0.0
 
-                    # Depois dos ingredientes,
-                    # pega o PRIMEIRO processo.
-                    tela_atual=procs[0]
+                    # Depois dos ingredientes, mostra um quiz
+                    # e so entao vai para o PRIMEIRO processo.
+                    preparar_quiz(procs[0])
 
                 else:
 
@@ -2616,9 +3235,7 @@ while rodando:
 
                     if indice+1 < len(procs):
 
-                        tela_atual=procs[
-                            indice+1
-                        ]
+                        preparar_quiz(procs[indice+1])
 
                     else:
 
@@ -2666,9 +3283,7 @@ while rodando:
 
                     if indice+1 < len(procs):
 
-                        tela_atual=procs[
-                            indice+1
-                        ]
+                        preparar_quiz(procs[indice+1])
 
                     else:
 
@@ -2702,7 +3317,12 @@ while rodando:
 
                 elif pr.collidepoint(p):
                     pontos+=20+len(decoracoes)*5
-                    tela_atual="resultado"
+
+                    if nome_jogador.strip()=="":
+                        tela_atual="nome"
+                    else:
+                        pontos_totais+=pontos
+                        tela_atual="resultado"
 
                 else:
                     # Seleciona a decoracao sem coloca-la ainda.
@@ -2732,6 +3352,49 @@ while rodando:
 
                         pontos+=5
 
+            # =================================================
+            # QUIZ
+            # =================================================
+            elif tela_atual=="quiz":
+
+                opcoes_rects,continuar=quiz_tela()
+
+                if not quiz_respondida:
+
+                    for idx,q in enumerate(opcoes_rects):
+
+                        if q.collidepoint(p):
+
+                            quiz_selecionada=idx
+                            quiz_respondida=True
+
+                            if idx==quiz_atual["correta"]:
+                                pontos+=15
+                                efeito(400,300,VERDE,20)
+                            else:
+                                efeito(400,300,ROSA2,10)
+
+                            break
+
+                elif continuar and continuar.collidepoint(p):
+
+                    tela_atual=destino_apos_quiz
+
+            # =================================================
+            # PEDIR NOME
+            # =================================================
+            elif tela_atual=="nome":
+
+                c=tela_nome()
+
+                if c.collidepoint(p):
+
+                    if nome_jogador.strip()=="":
+                        nome_jogador="Confeiteira(o)"
+
+                    pontos_totais+=pontos
+                    tela_atual="resultado"
+
             elif tela_atual=="resultado":
 
                 j,l=resultado()
@@ -2740,7 +3403,7 @@ while rodando:
 
                     iniciar()
 
-                    tela_atual="ingredientes"
+                    preparar_quiz("ingredientes")
 
                 elif l.collidepoint(p):
 
@@ -2813,9 +3476,9 @@ while rodando:
 
                 efeito(
                     600,
-                    335,
-                    ROSA,
-                    12
+                    340,
+                    receitas[receita_i]["cor"],
+                    14
                 )
 
             else:
@@ -2919,6 +3582,14 @@ while rodando:
     elif tela_atual=="decorar":
 
         decoracao()
+
+    elif tela_atual=="quiz":
+
+        quiz_tela()
+
+    elif tela_atual=="nome":
+
+        tela_nome()
 
     elif tela_atual=="resultado":
 
