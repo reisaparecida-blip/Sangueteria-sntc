@@ -23,6 +23,44 @@ pygame.display.set_caption("Sangueteria")
 clock = pygame.time.Clock()
 
 # ============================================================
+# MUSICA DE FUNDO
+# Procura por um arquivo de audio dentro de uma pasta "audio"
+# ao lado do script. Se nao encontrar nada, o jogo continua
+# normalmente, sem musica.
+# ============================================================
+PASTA_AUDIO=os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "audio"
+)
+
+NOMES_MUSICA=[
+    "trilha.ogg","trilha.mp3","trilha.wav",
+    "musica.ogg","musica.mp3","musica.wav"
+]
+
+def carregar_musica():
+    try:
+        pygame.mixer.init()
+    except pygame.error:
+        return False
+
+    for nome in NOMES_MUSICA:
+        caminho=os.path.join(PASTA_AUDIO,nome)
+
+        if os.path.exists(caminho):
+            try:
+                pygame.mixer.music.load(caminho)
+                pygame.mixer.music.set_volume(0.45)
+                pygame.mixer.music.play(-1)
+                return True
+            except pygame.error:
+                pass
+
+    return False
+
+musica_disponivel=carregar_musica()
+musica_ligada=musica_disponivel
+
+# ============================================================
 # CORES
 # ============================================================
 FUNDO=(35,20,45); ROXO=(105,55,145); ROXO2=(70,35,90)
@@ -83,27 +121,27 @@ receitas=[
         "quiz":[
             {
                 "pergunta":"Marie Curie foi pioneira em estudos sobre o que?",
-                "opcoes":["Radioatividade","Culinaria","Astronomia"],
+                "opcoes":["Radioatividade","Eletricidade estatica","Magnetismo terrestre"],
                 "correta":0,
-                "explicacao":"Marie Curie descobriu elementos radioativos como o Polonio e o Radio!"
+                "explicacao":"Marie Curie descobriu elementos radioativos como o Polonio e o Radio, e ate criou o termo 'radioatividade'."
             },
             {
-                "pergunta":"Quantos Premios Nobel Marie Curie ganhou, em areas diferentes?",
-                "opcoes":["Nenhum","Um","Dois"],
-                "correta":2,
-                "explicacao":"Ela foi a primeira pessoa da historia a ganhar Nobel em duas areas: Fisica e Quimica!"
+                "pergunta":"Quantos Premios Nobel Marie Curie ganhou, em areas cientificas diferentes?",
+                "opcoes":["Um","Dois","Tres"],
+                "correta":1,
+                "explicacao":"Ela ganhou o Nobel de Fisica (1903) e o de Quimica (1911) - a unica pessoa premiada nessas duas areas."
             },
             {
-                "pergunta":"Marie Curie foi a primeira mulher a conquistar o que?",
-                "opcoes":["Um Premio Nobel","Pilotar um aviao","Ser prefeita"],
-                "correta":0,
-                "explicacao":"Ela foi a primeira mulher da historia a ganhar um Premio Nobel, em 1903."
-            },
-            {
-                "pergunta":"Qual elemento quimico tem o nome inspirado no pais natal de Marie Curie?",
+                "pergunta":"Qual elemento quimico recebeu o nome em homenagem ao pais natal de Marie Curie?",
                 "opcoes":["Polonio","Francio","Germanio"],
                 "correta":0,
                 "explicacao":"O Polonio foi batizado em homenagem a Polonia, terra natal de Marie Curie."
+            },
+            {
+                "pergunta":"Marie Curie e seu marido Pierre extraiam o Radio e o Polonio de qual material?",
+                "opcoes":["Minerio de uranio","Rochas vulcanicas","Metais preciosos"],
+                "correta":0,
+                "explicacao":"Eles processaram toneladas de minerio de uranio (pechblenda) para extrair os novos elementos."
             }
         ]
     },
@@ -120,28 +158,28 @@ receitas=[
         "processos":["blender","decorar"],
         "quiz":[
             {
-                "pergunta":"O trabalho de Rosalind Franklin ajudou a descobrir o formato de qual molecula?",
-                "opcoes":["DNA","Agua","Sal de cozinha"],
+                "pergunta":"O trabalho de Rosalind Franklin ajudou a revelar o formato de qual molecula?",
+                "opcoes":["DNA","Proteina","Glicose"],
                 "correta":0,
-                "explicacao":"As imagens de Rosalind Franklin foram essenciais para revelar o formato do DNA."
+                "explicacao":"A famosa 'Fotografia 51' de Franklin foi essencial para revelar a estrutura do DNA."
             },
             {
-                "pergunta":"Rosalind Franklin usava qual tecnica para 'fotografar' moleculas minusculas?",
-                "opcoes":["Difracao de raios-X","Pintura a oleo","Microscopio de brinquedo"],
+                "pergunta":"Rosalind Franklin usava qual tecnica para estudar moleculas microscopicas?",
+                "opcoes":["Difracao de raios-X","Cromatografia","Espectroscopia de massa"],
                 "correta":0,
-                "explicacao":"Ela usava difracao de raios-X para revelar estruturas invisiveis a olho nu."
+                "explicacao":"Ela era especialista em cristalografia por difracao de raios-X."
             },
             {
-                "pergunta":"O DNA tem o formato de uma...?",
-                "opcoes":["Dupla helice (espiral dupla)","Estrela","Cubo"],
+                "pergunta":"Qual e o formato da molecula de DNA?",
+                "opcoes":["Dupla helice","Cadeia linear reta","Anel fechado"],
                 "correta":0,
-                "explicacao":"O DNA se parece com uma escada torcida, chamada dupla helice."
+                "explicacao":"O DNA tem o formato de uma escada torcida, chamada dupla helice."
             },
             {
-                "pergunta":"O que o DNA guarda dentro das nossas celulas?",
-                "opcoes":["As instrucoes geneticas do corpo","Receitas de bolo","Fotos antigas"],
+                "pergunta":"Os dados de Rosalind Franklin foram usados por dois outros cientistas para propor o modelo do DNA. Quem foram eles?",
+                "opcoes":["Watson e Crick","Newton e Einstein","Darwin e Mendel"],
                 "correta":0,
-                "explicacao":"O DNA carrega as instrucoes que determinam como cada ser vivo se desenvolve."
+                "explicacao":"James Watson e Francis Crick usaram os dados de Franklin para montar o modelo da dupla helice."
             }
         ]
     },
@@ -158,28 +196,28 @@ receitas=[
         "processos":["blender","forno","decorar"],
         "quiz":[
             {
-                "pergunta":"Katherine Johnson calculava trajetorias para qual orgao espacial?",
-                "opcoes":["NASA","Escola de culinaria","Time de futebol"],
+                "pergunta":"Katherine Johnson calculava trajetorias para qual agencia espacial?",
+                "opcoes":["NASA","Agencia Espacial Europeia","Roscosmos"],
                 "correta":0,
-                "explicacao":"Katherine Johnson foi matematica da NASA e calculou rotas de missoes espaciais."
+                "explicacao":"Katherine Johnson trabalhou na NASA calculando rotas de voos espaciais tripulados."
             },
             {
-                "pergunta":"O trabalho de Katherine Johnson ajudou astronautas a...?",
-                "opcoes":["Chegar com seguranca ao espaco e voltar","Aprender a cozinhar","Aprender a dancar"],
+                "pergunta":"Katherine Johnson calculou a trajetoria de qual missao espacial historica?",
+                "opcoes":["O primeiro voo orbital americano","A primeira viagem a Lua sem tripulacao","O lancamento do primeiro satelite"],
                 "correta":0,
-                "explicacao":"Seus calculos garantiram trajetorias seguras para missoes tripuladas da NASA."
+                "explicacao":"Ela calculou a trajetoria do voo de John Glenn, o primeiro americano a orbitar a Terra."
             },
             {
                 "pergunta":"Katherine Johnson era especialista em qual area?",
-                "opcoes":["Matematica","Culinaria","Moda"],
+                "opcoes":["Matematica","Quimica","Engenharia mecanica"],
                 "correta":0,
-                "explicacao":"Ela era uma matematica brilhante, essencial para o programa espacial dos EUA."
+                "explicacao":"Ela era matematica, e seus calculos manuais eram essenciais antes dos computadores confiaveis."
             },
             {
                 "pergunta":"O filme que conta a historia de Katherine Johnson se chama...?",
-                "opcoes":["Estrelas Alem do Tempo","Vingadores","Frozen"],
+                "opcoes":["Estrelas Alem do Tempo","Interestelar","O Jogo da Imitacao"],
                 "correta":0,
-                "explicacao":"O filme 'Estrelas Alem do Tempo' (Hidden Figures) conta a historia dela e de outras cientistas."
+                "explicacao":"'Estrelas Alem do Tempo' (Hidden Figures) conta a historia dela e de outras cientistas da NASA."
             }
         ]
     },
@@ -197,27 +235,27 @@ receitas=[
         "quiz":[
             {
                 "pergunta":"Ada Lovelace e considerada a primeira...?",
-                "opcoes":["Programadora de computadores do mundo","Cientista de foguetes","Chef de cozinha"],
+                "opcoes":["Programadora de computadores da historia","Engenheira mecanica","Inventora do computador"],
                 "correta":0,
-                "explicacao":"Ada Lovelace escreveu o que hoje reconhecemos como o primeiro programa de computador."
+                "explicacao":"Ada Lovelace escreveu o que e considerado o primeiro programa de computador da historia."
             },
             {
-                "pergunta":"Ada Lovelace escreveu instrucoes para qual maquina antiga?",
-                "opcoes":["A Maquina Analitica","Um liquidificador","Uma maquina de costura"],
+                "pergunta":"Ada Lovelace escreveu instrucoes para qual maquina, projetada por Charles Babbage?",
+                "opcoes":["A Maquina Analitica","O Tear de Jacquard","A Maquina de Diferencas"],
                 "correta":0,
-                "explicacao":"Ela criou instrucoes para a Maquina Analitica, projetada por Charles Babbage."
+                "explicacao":"Ela escreveu algoritmos para a Maquina Analitica, o projeto mais ambicioso de Babbage."
             },
             {
                 "pergunta":"As instrucoes que Ada Lovelace escreveu, hoje chamamos de...?",
-                "opcoes":["Um programa (codigo)","Uma receita de bolo","Uma musica"],
+                "opcoes":["Um programa (codigo)","Um manual tecnico","Uma formula matematica"],
                 "correta":0,
-                "explicacao":"O que ela escreveu e considerado o primeiro algoritmo feito para ser rodado numa maquina."
+                "explicacao":"O que ela escreveu e considerado o primeiro algoritmo feito para rodar numa maquina."
             },
             {
                 "pergunta":"Em homenagem a Ada Lovelace existe uma linguagem de programacao chamada...?",
-                "opcoes":["Ada","Python","Java"],
+                "opcoes":["Ada","Lovelace++","AdaScript"],
                 "correta":0,
-                "explicacao":"A linguagem de programacao 'Ada' foi batizada em sua homenagem."
+                "explicacao":"A linguagem de programacao 'Ada', usada ate hoje em sistemas criticos, foi batizada em sua homenagem."
             }
         ]
     }
@@ -256,6 +294,9 @@ destino_apos_quiz="ingredientes"
 
 # Nome do jogador (pedido so uma vez, na tela final)
 nome_jogador=""
+
+# Historico de quem ja jogou nesta sessao, para o ranking.
+historico=[]
 
 # ============================================================
 # UTILIDADES
@@ -932,10 +973,19 @@ def menu():
         475,340,.75
     )
 
+    som=None
+
+    if musica_disponivel:
+        som=botao(
+            "SOM: ON" if musica_ligada else "SOM: OFF",
+            650,20,130,42
+        )
+
     return (
         botao("JOGAR",300,420,200,60),
         botao("CIENTISTAS",270,490,260,55),
-        botao("SAIR",300,555,200,42)
+        botao("SAIR",300,555,200,42),
+        som
     )
 
 # ============================================================
@@ -1035,78 +1085,138 @@ def desenhar_base_da_receita(
     # --------------------------------------------------------
     elif "Spooky" in nome:
 
+        centro_x=cx
+        centro_y=cy+15*escala
+        raio=66*escala
+
+        # Sombra
         pygame.draw.ellipse(
             tela,PRETO,
             (
-                cx-95*escala,
-                cy+65*escala,
-                190*escala,
-                28*escala
+                cx-72*escala,
+                centro_y+raio-18*escala,
+                144*escala,
+                26*escala
+            )
+        )
+
+        # Gargalo estreito do frasco.
+        pygame.draw.rect(
+            tela,(205,220,232),
+            (
+                cx-13*escala,
+                cy-118*escala,
+                26*escala,
+                58*escala
+            ),
+            border_radius=max(2,int(6*escala))
+        )
+
+        # Rolha de cortica.
+        pygame.draw.ellipse(
+            tela,(178,120,78),
+            (
+                cx-19*escala,
+                cy-138*escala,
+                38*escala,
+                16*escala
             )
         )
 
         pygame.draw.rect(
-            tela,(220,220,235),
+            tela,(155,98,62),
             (
-                cx-70*escala,
-                cy-90*escala,
-                140*escala,
-                155*escala
+                cx-17*escala,
+                cy-132*escala,
+                34*escala,
+                20*escala
             ),
-            border_radius=28
+            border_radius=max(2,int(4*escala))
         )
 
-        pygame.draw.ellipse(
-            tela,(170,150,205),
-            (
-                cx-70*escala,
-                cy-25*escala,
-                140*escala,
-                100*escala
-            )
+        # Corpo redondo de vidro.
+        pygame.draw.circle(
+            tela,(222,233,240),
+            (int(centro_x),int(centro_y)),
+            int(raio)
         )
 
+        # Liquido borbulhante ocupando a parte inferior.
         pygame.draw.ellipse(
             tela,(90,35,160),
             (
-                cx-58*escala,
-                cy-10*escala,
-                116*escala,
-                80*escala
+                centro_x-raio+4*escala,
+                centro_y-10*escala,
+                (raio-4*escala)*2,
+                raio*0.85
             )
         )
 
-        pygame.draw.rect(
-            tela,ROXO,
-            (
-                cx-40*escala,
-                cy-105*escala,
-                80*escala,
-                28*escala
-            ),
-            border_radius=8
-        )
-
-        pygame.draw.rect(
-            tela,CINZA,
-            (
-                cx-9*escala,
-                cy-125*escala,
-                18*escala,
-                22*escala
-            ),
-            border_radius=4
-        )
-
-        # líquido
         pygame.draw.ellipse(
-            tela,ROSA2,
+            tela,(140,80,205),
             (
-                cx-30*escala,
-                cy+5*escala,
-                60*escala,
-                42*escala
+                centro_x-38*escala,
+                centro_y-14*escala,
+                76*escala,
+                16*escala
             )
+        )
+
+        for k in range(3):
+            by=centro_y+34*escala-((animacao*30+k*17)%(40*escala))
+            bx=centro_x-20*escala+k*20*escala
+
+            pygame.draw.circle(
+                tela,(200,160,235),
+                (int(bx),int(by)),
+                max(1,int(2.2*escala))
+            )
+
+        # Contorno de vidro por cima do liquido.
+        pygame.draw.circle(
+            tela,(180,198,215),
+            (int(centro_x),int(centro_y)),
+            int(raio),
+            max(2,int(3*escala))
+        )
+
+        # Brilho de vidro.
+        pygame.draw.arc(
+            tela,BRANCO,
+            (
+                centro_x-raio,
+                centro_y-raio,
+                raio*2,
+                raio*2
+            ),
+            math.pi*0.75,math.pi*1.3,
+            max(2,int(3*escala))
+        )
+
+        # Etiqueta de laboratorio colada no frasco.
+        pygame.draw.rect(
+            tela,CREME,
+            (
+                centro_x-28*escala,
+                centro_y+18*escala,
+                56*escala,
+                24*escala
+            ),
+            border_radius=max(2,int(4*escala))
+        )
+
+        pygame.draw.line(
+            tela,(150,140,150),
+            (centro_x-20*escala,centro_y+26*escala),
+            (centro_x+20*escala,centro_y+26*escala),
+            max(1,int(2*escala))
+        )
+
+        pygame.draw.line(
+            tela,(150,140,150),
+            (centro_x-20*escala,centro_y+34*escala),
+            (centro_x+6*escala,centro_y+34*escala),
+            max(1,int(2*escala))
         )
 
     # --------------------------------------------------------
@@ -2679,14 +2789,37 @@ def quiz_tela():
 
     return opcoes_rects,continuar
 
+def registrar_resultado():
+    global pontos_totais
+
+    pontos_totais+=pontos
+
+    historico.append({
+        "nome":nome_jogador,
+        "receita":receitas[receita_i]["nome"],
+        "pontos":pontos
+    })
+
 def preparar_quiz(destino):
     global tela_atual,quiz_atual,quiz_respondida
     global quiz_selecionada,destino_apos_quiz,quiz_index
 
     lista=receitas[receita_i]["quiz"]
 
-    quiz_atual=lista[quiz_index%len(lista)]
+    base=lista[quiz_index%len(lista)]
     quiz_index+=1
+
+    # Embaralha a ordem das opcoes para a resposta certa
+    # nao cair sempre na mesma letra.
+    indices=list(range(len(base["opcoes"])))
+    random.shuffle(indices)
+
+    quiz_atual={
+        "pergunta":base["pergunta"],
+        "opcoes":[base["opcoes"][i] for i in indices],
+        "correta":indices.index(base["correta"]),
+        "explicacao":base.get("explicacao","")
+    }
 
     quiz_respondida=False
     quiz_selecionada=None
@@ -2773,12 +2906,95 @@ def resultado():
     for d in decoracoes:
         decor(d[0],d[1],d[2])
 
-    center("Sua receita decorada!",fonte,ROSA2,445)
+    center("Sua receita decorada!",fonte,ROSA2,435)
 
     return (
-        botao("JOGAR NOVAMENTE",210,480,380,50),
-        botao("VOLTAR AO LIVRO",210,545,380,50)
+        botao("VER RANKING",210,472,380,44),
+        botao("JOGAR NOVAMENTE",100,528,290,50),
+        botao("VOLTAR AO LIVRO",410,528,290,50)
     )
+
+# ============================================================
+# RANKING
+# ============================================================
+def ranking_tela():
+    parede()
+    barra_cabecalho()
+
+    b=voltar()
+
+    center("RANKING DE CONFEITEIRAS(OS)",grande,ROSA,45)
+
+    ordenado=sorted(
+        historico,
+        key=lambda h:h["pontos"],
+        reverse=True
+    )[:8]
+
+    if not ordenado:
+
+        center(
+            "Ainda ninguem terminou uma receita nesta sessao!",
+            fonte,BRANCO,260
+        )
+
+    else:
+
+        cores_pos=[AMARELO,CINZA,(200,140,80)]
+
+        y=155
+
+        for idx,h in enumerate(ordenado):
+
+            linha=pygame.Rect(60,y,680,50)
+
+            pygame.draw.rect(
+                tela,PRETO,linha.move(0,5),border_radius=14
+            )
+            pygame.draw.rect(
+                tela,ROXO2,linha,border_radius=14
+            )
+            pygame.draw.rect(
+                tela,ROSA,linha,2,border_radius=14
+            )
+
+            cor_medalha=cores_pos[idx] if idx<3 else ROXO
+
+            pygame.draw.circle(
+                tela,cor_medalha,
+                (linha.x+34,linha.y+25),22
+            )
+
+            im_pos=texto_ajustado(
+                str(idx+1)+"o",34,24,PRETO
+            )
+
+            tela.blit(
+                im_pos,
+                (
+                    linha.x+34-im_pos.get_width()//2,
+                    linha.y+25-im_pos.get_height()//2
+                )
+            )
+
+            txt(h["nome"],fonte,BRANCO,linha.x+72,linha.y+6)
+            txt(h["receita"],pequena,ROSA2,linha.x+72,linha.y+29)
+
+            im_pts=texto_ajustado(
+                str(h["pontos"])+" pts",90,26,AMARELO
+            )
+
+            tela.blit(
+                im_pts,
+                (
+                    linha.right-18-im_pts.get_width(),
+                    linha.y+13
+                )
+            )
+
+            y+=58
+
+    return b
 
 # ============================================================
 # CIENTISTAS
@@ -3087,7 +3303,7 @@ while rodando:
                 if nome_jogador.strip()=="":
                     nome_jogador="Confeiteira(o)"
 
-                pontos_totais+=pontos
+                registrar_resultado()
                 tela_atual="resultado"
 
             elif (
@@ -3112,7 +3328,7 @@ while rodando:
             # =================================================
             if tela_atual=="menu":
 
-                j,c,s=menu()
+                j,c,s,som=menu()
 
                 if j.collidepoint(p):
 
@@ -3125,6 +3341,15 @@ while rodando:
                 elif s.collidepoint(p):
 
                     rodando=False
+
+                elif som and som.collidepoint(p):
+
+                    musica_ligada=not musica_ligada
+
+                    if musica_ligada:
+                        pygame.mixer.music.unpause()
+                    else:
+                        pygame.mixer.music.pause()
 
             # =================================================
             # LIVRO DE RECEITAS
@@ -3321,7 +3546,7 @@ while rodando:
                     if nome_jogador.strip()=="":
                         tela_atual="nome"
                     else:
-                        pontos_totais+=pontos
+                        registrar_resultado()
                         tela_atual="resultado"
 
                 else:
@@ -3392,14 +3617,18 @@ while rodando:
                     if nome_jogador.strip()=="":
                         nome_jogador="Confeiteira(o)"
 
-                    pontos_totais+=pontos
+                    registrar_resultado()
                     tela_atual="resultado"
 
             elif tela_atual=="resultado":
 
-                j,l=resultado()
+                rk,j,l=resultado()
 
-                if j.collidepoint(p):
+                if rk.collidepoint(p):
+
+                    tela_atual="ranking"
+
+                elif j.collidepoint(p):
 
                     iniciar()
 
@@ -3408,6 +3637,17 @@ while rodando:
                 elif l.collidepoint(p):
 
                     tela_atual="receitas"
+
+            # =================================================
+            # RANKING
+            # =================================================
+            elif tela_atual=="ranking":
+
+                b=ranking_tela()
+
+                if b.collidepoint(p):
+
+                    tela_atual="resultado"
 
             # =================================================
             # CIENTISTAS
@@ -3594,6 +3834,10 @@ while rodando:
     elif tela_atual=="resultado":
 
         resultado()
+
+    elif tela_atual=="ranking":
+
+        ranking_tela()
 
     elif tela_atual=="cientistas":
 
